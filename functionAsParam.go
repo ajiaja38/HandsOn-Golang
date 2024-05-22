@@ -5,19 +5,19 @@ import "fmt"
 func filteredName(name string, filter func(name string) string) {
 	filtered := filter(name)
 
-	fmt.Println("Hello: ", filtered)
+	fmt.Println(filtered)
 }
 
 func spamFilter(name string) string {
 	if name == "Aji" {
 		return name
 	} else {
-		return "Salah Orang!"
+		return "Wrong Person"
 	}
 }
 
 func main() {
 	filter := spamFilter
 
-	filteredName("siska", filter)
+	filteredName("Aji", filter)
 }
