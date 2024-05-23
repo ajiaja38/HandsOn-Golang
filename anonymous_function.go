@@ -6,23 +6,17 @@ type Blacklist func(name string) bool
 
 func isBlacklist(name string, blacklist Blacklist) string {
 	if blacklist(name) {
-		return "Maaf, Kata-kata anda diblacklist"
+		return "kata kata kamu telah terblacklist"
 	} else {
-		return "Selamat, kata kata anda lulus sensor"
+		return "kata kata anda lolos"
 	}
 }
 
 func main() {
-	blacklist := func(name string) bool {
-		return name == "Anjing" || name == "Kadal"
+	blackListWord := func(name string) bool {
+		return name == "Anjing"
 	}
 
-	result := isBlacklist("Anjing", blacklist)
-
-	results := isBlacklist("Kadal", func(name string) bool {
-		return name == "Anjing" || name == "Kadal"
-	})
-
+	result := isBlacklist("Anjing", blackListWord)
 	fmt.Println(result)
-	fmt.Println(results)
 }
