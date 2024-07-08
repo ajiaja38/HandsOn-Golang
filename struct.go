@@ -7,22 +7,20 @@ type Customer struct {
 	Age           int
 }
 
+func sayHellos(customer Customer) string {
+	return "Hello " + customer.Name
+}
+
 func main() {
-	var aji Customer
-
-	aji.Name = "M. Aji Perdana"
-	aji.Address = "Lampung"
-	aji.Age = 22
-
-	frasiska := Customer{
-		Name:    "Frasiska Risma Yolanda",
-		Address: "Wates Selatan, Pringsewu",
-		Age:     22,
+	vera := Customer{
+		Name:    "Vera",
+		Address: "Jakarta",
+		Age:     20,
 	}
 
-	alam := Customer{"Ridwan Alamsyah", "Tangerang", 8}
+	Aji := Customer{"M. Aji Perdana", "Lampung", 22}
 
-	fmt.Println(aji)
-	fmt.Println(frasiska)
-	fmt.Println(alam)
+	fmt.Println(vera)
+	fmt.Println(Aji)
+	fmt.Println(sayHellos(vera))
 }

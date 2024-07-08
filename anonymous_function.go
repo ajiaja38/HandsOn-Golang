@@ -18,5 +18,10 @@ func main() {
 	}
 
 	result := isBlacklist("Anjing", blackListWord)
+	results := isBlacklist("Kadal", func(name string) bool {
+		return name == "Anjing"
+	})
+
 	fmt.Println(result)
+	fmt.Println(results)
 }
