@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-func multipleAll(args ...int) int {
-	result := 1
+func sumAll(args ...int) int {
+	result := 0
 
 	for _, arg := range args {
-		result *= arg
+		result += arg
 	}
 
 	return result
 }
 
 func main() {
-	fmt.Println(multipleAll(1, 2, 3, 4))
+	numbers := []int{1, 2, 3, 4, 5, 6}
+	result := sumAll(numbers...)
 
-	numbers := []int{1, 2, 3, 4, 5}
-	fmt.Println(multipleAll(numbers...))
+	fmt.Println(result)
 }
