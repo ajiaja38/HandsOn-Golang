@@ -17,4 +17,5 @@ func main() {
 	result := sumAll(numbers...)
 
 	fmt.Println(result)
+	fmt.Println(sumAll(1, 2, 3, 4, 5, 6))
 }
