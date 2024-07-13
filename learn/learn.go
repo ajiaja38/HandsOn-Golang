@@ -2,20 +2,17 @@ package main
 
 import "fmt"
 
-func sumAll(args ...int) int {
+func sumAll(numbers ...int) int {
 	result := 0
 
-	for _, arg := range args {
-		result += arg
+	for _, number := range numbers {
+		result += number
 	}
 
 	return result
 }
 
 func main() {
-	numbers := []int{1, 2, 3, 4, 5, 6}
-	result := sumAll(numbers...)
-
-	fmt.Println(result)
-	fmt.Println(sumAll(1, 2, 3, 4, 5, 6))
+	var numbers []int = []int{1, 2, 3, 4, 5}
+	fmt.Println(sumAll(numbers...))
 }
